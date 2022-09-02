@@ -168,7 +168,6 @@ void setup() {
   // timed actions setup
   timer.setInterval(15000, RepeatTask);
   timer.setTimeout(10000, OnceOnlyTask);
-  timer.setInterval(1000, DigitalClockDisplay);
   timer.setTimer(1200, TenTimesTask, 10);
 }
  

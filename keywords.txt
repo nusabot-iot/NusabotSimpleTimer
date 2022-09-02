@@ -1,0 +1,28 @@
+#######################################
+# Syntax Coloring Map For Dashboard
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+NusabotSimpleTimer	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+setInterval 	KEYWORD2
+setTimeout 	KEYWORD2
+setTimer 	KEYWORD2
+isEnable 	KEYWORD2
+enable 	KEYWORD2
+disable 	KEYWORD2
+toogle	 	KEYWORD2
+restartTimer 	KEYWORD2
+deleteTimer 	KEYWORD2
+getNumTimers 	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################

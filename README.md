@@ -1,6 +1,6 @@
 Forked from https://playground.arduino.cc/Code/SimpleTimer/
 
-# SimpleTimer-Nusabot
+# NusabotSimpleTimer
 This is (yet another) simple library to launch timed actions.
 
 It's based on millis(), thus it has 1 ms resolution.
@@ -129,12 +129,12 @@ n = timer.getNumTimers();
 
 ## Example
 ```cpp
-#include <SimpleTimer.h>
+#include <NusabotSimpleTimer.h>
  
 // There must be one global SimpleTimer object.
 // More SimpleTimer objects can be created and run,
 // although there is little point in doing so.
-SimpleTimer timer;
+NusabotSimpleTimer timer;
  
 // function to be called repeatedly
 void RepeatTask() {

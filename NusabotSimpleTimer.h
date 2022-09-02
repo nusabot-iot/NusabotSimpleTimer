@@ -28,7 +28,7 @@ public:
     const static int RUN_ONCE = 1;
 
     // constructor
-    SimpleTimer();
+    NusabotSimpleTimer();
 
     // this function must be called inside loop()
     void run();

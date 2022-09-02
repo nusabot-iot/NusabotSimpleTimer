@@ -6,7 +6,7 @@
 static inline unsigned long elapsed() { return millis(); }
 
 
-SimpleTimer::SimpleTimer() {
+NusabotSimpleTimer::NusabotSimpleTimer() {
     unsigned long current_millis = elapsed();
 
     for (int i = 0; i < MAX_TIMERS; i++) {
@@ -20,7 +20,7 @@ SimpleTimer::SimpleTimer() {
 }
 
 
-void SimpleTimer::run() {
+void NusabotSimpleTimer::run() {
     int i;
     unsigned long current_millis;
 
@@ -85,7 +85,7 @@ void SimpleTimer::run() {
 
 // find the first available slot
 // return -1 if none found
-int SimpleTimer::findFirstFreeSlot() {
+int NusabotSimpleTimer::findFirstFreeSlot() {
     int i;
 
     // all slots are used
@@ -105,7 +105,7 @@ int SimpleTimer::findFirstFreeSlot() {
 }
 
 
-int SimpleTimer::setTimer(unsigned long d, timer_callback f, int n) {
+int NusabotSimpleTimer::setTimer(unsigned long d, timer_callback f, int n) {
     int freeTimer;
 
     freeTimer = findFirstFreeSlot();
@@ -129,17 +129,17 @@ int SimpleTimer::setTimer(unsigned long d, timer_callback f, int n) {
 }
 
 
-int SimpleTimer::setInterval(unsigned long d, timer_callback f) {
+int NusabotSimpleTimer::setInterval(unsigned long d, timer_callback f) {
     return setTimer(d, f, RUN_FOREVER);
 }
 
 
-int SimpleTimer::setTimeout(unsigned long d, timer_callback f) {
+int NusabotSimpleTimer::setTimeout(unsigned long d, timer_callback f) {
     return setTimer(d, f, RUN_ONCE);
 }
 
 
-void SimpleTimer::deleteTimer(int timerId) {
+void NusabotSimpleTimer::deleteTimer(int timerId) {
     if (timerId >= MAX_TIMERS) {
         return;
     }
@@ -165,7 +165,7 @@ void SimpleTimer::deleteTimer(int timerId) {
 
 
 // function contributed by code@rowansimms.com
-void SimpleTimer::restartTimer(int numTimer) {
+void NusabotSimpleTimer::restartTimer(int numTimer) {
     if (numTimer >= MAX_TIMERS) {
         return;
     }
@@ -174,7 +174,7 @@ void SimpleTimer::restartTimer(int numTimer) {
 }
 
 
-boolean SimpleTimer::isEnabled(int numTimer) {
+boolean NusabotSimpleTimer::isEnabled(int numTimer) {
     if (numTimer >= MAX_TIMERS) {
         return false;
     }
@@ -183,7 +183,7 @@ boolean SimpleTimer::isEnabled(int numTimer) {
 }
 
 
-void SimpleTimer::enable(int numTimer) {
+void NusabotSimpleTimer::enable(int numTimer) {
     if (numTimer >= MAX_TIMERS) {
         return;
     }
@@ -192,7 +192,7 @@ void SimpleTimer::enable(int numTimer) {
 }
 
 
-void SimpleTimer::disable(int numTimer) {
+void NusabotSimpleTimer::disable(int numTimer) {
     if (numTimer >= MAX_TIMERS) {
         return;
     }
@@ -201,7 +201,7 @@ void SimpleTimer::disable(int numTimer) {
 }
 
 
-void SimpleTimer::toggle(int numTimer) {
+void NusabotSimpleTimer::toggle(int numTimer) {
     if (numTimer >= MAX_TIMERS) {
         return;
     }
@@ -210,6 +210,6 @@ void SimpleTimer::toggle(int numTimer) {
 }
 
 
-int SimpleTimer::getNumTimers() {
+int NusabotSimpleTimer::getNumTimers() {
     return numTimers;
 }

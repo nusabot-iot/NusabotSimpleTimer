@@ -1,12 +1,12 @@
 {
-    "name": "Nusabot Simple Timer",
+    "name": "NusabotSimpleTimer",
     "keywords": "timed",
     "description": "Simple library to launch timed actions..",
     "repository": {
         "type": "git",
         "url": "https://github.com/nusabot-iot/NusabotSimpleTimer"
     },
-    "version": "1.0.0",
+    "version": "1.0.1",
     "exclude": "tests",
     "examples": "examples/*.ino",
     "frameworks": "arduino",
